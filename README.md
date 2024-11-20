@@ -1,6 +1,6 @@
-![Ironhack logo](https://i.imgur.com/1QgrNNw.png)
-
 # LAB | Introduction to Asynchronous JavaScript and Promises
+
+![I Promise You](https://media.tenor.com/_pm_2Apx3GAAAAAM/i-promise-you-promise.gif)
 
 ## Introduction
 
