@@ -21,7 +21,7 @@ Upon completion, run the following commands:
 ```shell
 git add .
 git commit -m "done"
-git push origin master
+git push origin main
 ```
 
 Then, create a Pull Request.
@@ -167,7 +167,7 @@ Commit your changes before proceeding.
 ```bash
 git add .
 git commit -m "feat: fetch data with promises"
-git push origin master
+git push origin main
 ```
 
 Refactor your `fetchData` function to use `async/await` instead of `.then()` and `.catch()`.
