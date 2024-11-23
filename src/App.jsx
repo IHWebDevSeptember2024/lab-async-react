@@ -4,8 +4,11 @@ import { useEffect } from "react";
 import fetchData from "./api";
 
 function App() {
+  async function getData() {
+    fetchData();
+  }
   useEffect(() => {
-    fetchData()
+    getData();
   }, []);
 
   return (
