@@ -1,4 +1,5 @@
 import "./App.css";
+import myPromise from "./async-example";
 
 function App() {
   return (
@@ -7,6 +8,7 @@ function App() {
       <p>
         Check the console to see the output of the <code>console.log</code>
       </p>
+      <p>{myPromise}</p>
     </>
   );
 }
