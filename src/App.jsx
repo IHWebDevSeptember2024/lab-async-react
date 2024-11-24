@@ -11,11 +11,13 @@ function App() {
 
   }, []);
 
+   async function getData() { 
+    const data = await fetchData();
+    console.log(data);
+  }
+
   useEffect(() => {
-    fetchData()
-      .then((response) => {
-        console.log(response);
-      });
+    getData();
   }, []);
 
 
