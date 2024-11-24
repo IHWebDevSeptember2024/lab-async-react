@@ -2,9 +2,10 @@ import { useEffect } from "react";
 import "./App.css";
 import loadData from "./async-example";
 import fetchData from "./api";
+import DataFetcher from "./DataFetcher";
 
 function App() {
-  useEffect(()=>{
+  /* useEffect(()=>{
     loadData()
       .then((response)=>{console.log(response)})
       .catch((error)=>{console.error(error)})
@@ -18,15 +19,12 @@ function App() {
 
   useEffect(() => {
     getData();
-  }, []);
+  }, []); */
 
 
   return (
     <>
-      <h1>If you see this, it means that the App component is working fine!</h1>
-      <p>
-        Check the console to see the output of the <code>console.log</code>
-      </p>
+      <DataFetcher />
     </>
   );
 }
