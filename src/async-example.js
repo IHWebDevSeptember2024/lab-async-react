@@ -1,25 +1,15 @@
+function makeAPromise() {
+    return new Promise((resolve, reject) => {
+    const success = false;
 
-const myPromise = new Promise((resolve, reject)=>{
-    const success = true;
-    setTimeout(() => {if (success) {
+    setTimeout(() => {
+      if (success) {
         resolve("Data loaded");
-    } else {
+      } else {
         reject("Data not loaded");
-    }},2000)
+      }
+    }, 2000);
+  });
+}
 
-})
-
-myPromise
-    .then((message) => {
-        console.log(message);
-        
-    })
-    .catch((error)=>{
-        console.log(error);
-        
-    });
-    
-console.log(myPromise);
-
-
-export default myPromise;
+export default makeAPromise;
