@@ -1,6 +1,7 @@
 import "./App.css";
 import myPromise from "./async-example";
 import { useState, useEffect } from "react";
+import fetchData from "./FetchData";
 
 function App() {
   const [data, setData] = useState("");
@@ -14,6 +15,10 @@ function App() {
     .catch((error)=> { 
     setError(error)
   });
+}, [])
+
+useEffect(()=> {
+  fetchData();
 }, [])
 
 
