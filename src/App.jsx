@@ -16,15 +16,12 @@ function App() {
   });
 }, [])
 
-  
-  return (
-    <>
-    { data? ( 
-    <p>Message: {data}</p> )
-    : <p>Loading</p>
-   }
-    </>
-  );
- }
 
+return (  
+  <>
+  {data==="" ?<p> Loading </p>:<p> {data} </p>}
+  {error &&<p> This has not worked </p>}
+  </>
+)
+  }
 export default App;
