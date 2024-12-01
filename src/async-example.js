@@ -1,26 +1,17 @@
-function myFunction() {
-  return new Promise((resolve, reject) => {
-
+function loadData() {
+  const myPromise = new Promise((resolve, reject) => {
     setTimeout(() => {
-      resolve('promise resolved!');
-      reject('Error loading data')
+      resolve("Data loaded");
     }, 2000);
   });
+
+  myPromise
+    .then((result) => {
+      console.log(result);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
 }
 
-
-
-myFunction
-.then((resolve)=>{
-    console.log(resolve);
-})
-
-.catch((reject)=>{
-    console.log(reject)
-});
-
-
-
-
-
-export default myFunction;
+export default loadData;
