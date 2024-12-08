@@ -1,14 +1,17 @@
-import "./App.css";
+import React, { useEffect } from "react";
+import fetchData from "./api";
 
 function App() {
-  return (
-    <>
-      <h1>If you see this, it means that the App component is working fine!</h1>
-      <p>
-        Check the console to see the output of the <code>console.log</code>
-      </p>
-    </>
-  );
+  async function getData() {
+    const data = await fetchData();
+    console.log(data);
+  }
+
+  useEffect(() => {
+    getData();
+  }, []);
+
+  return <div className="App">Fetching data with async/await...</div>;
 }
 
 export default App;
