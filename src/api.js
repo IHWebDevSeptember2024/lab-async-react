@@ -3,16 +3,15 @@ async function fetchData() {
     const response = await fetch("https://rickandmortyapi.com/api/character");
 
     // en caso de no encontrar los datos...
-    if (response.status === 404) {
-      throw new Error("Not Found");
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
     }
 
     const data = await response.json();
-    console.log(data);
     return data;
   } catch (error) {
-    console.error("Error");
+    console.error ("Error fetching data:", error);
   }
 }
-fetchData();
+
 export default fetchData;
